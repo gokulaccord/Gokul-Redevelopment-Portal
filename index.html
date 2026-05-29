@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gokul Accord CHS Ltd — Redevelopment Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/utilities.css">
+<script src="js/app.js" defer></script>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header class="site-header">
+  <div class="logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1D3557" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+    </div>
+    <div class="logo-text">
+      Gokul Accord CHS Ltd
+      <span>REDEVELOPMENT INTRANET · RDC PORTAL</span>
+    </div>
+  </div>
+  <div class="header-right">
+    <span class="stage-badge">&#9654; Stage 1 — Understanding Process of Redevelopment</span>
+    <span class="header-date" id="live-date"></span>
+  </div>
+</header>
+
+<!-- ══ LAYOUT ══ -->
+<div class="layout">
+
+  <!-- ══ SIDEBAR ══ -->
+  <nav class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">Main</div>
+      <div class="nav-item active" onclick="showPage('dashboard', this)">
+        <span class="icon">&#9632;</span> Dashboard
+      </div>
+      <div class="nav-item" onclick="showPage('meetings', this)">
+        <span class="icon">&#128197;</span> Meetings &amp; Minutes
+      </div>
+      <div class="nav-item" onclick="showPage('stages', this)">
+        <span class="icon">&#128200;</span> RD Stages
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Transparency</div>
+      <div class="nav-item" onclick="showPage('consent', this)">
+        <span class="icon">&#9989;</span> Member Consent
+      </div>
+      <div class="nav-item" onclick="showPage('developer', this)">
+        <span class="icon">&#127970;</span> Developer Bids
+      </div>
+      <div class="nav-item" onclick="showPage('da', this)">
+        <span class="icon">&#128220;</span> DA Checklist
+      </div>
+      <div class="nav-item" onclick="showPage('legal', this)">
+        <span class="icon">&#9878;</span> Legal Milestones
+      </div>
+      <div class="nav-item" onclick="showPage('finance', this)">
+        <span class="icon">&#128181;</span> Finance &amp; Corpus
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Records</div>
+      <div class="nav-item" onclick="showPage('documents', this)">
+        <span class="icon">&#128193;</span> Documents
+      </div>
+      <div class="nav-item" onclick="showPage('committee', this)">
+        <span class="icon">&#128101;</span> RDC Committee
+      </div>
+      <div class="nav-item" onclick="showPage('notices', this)">
+        <span class="icon">&#128276;</span> Notices
+      </div>
+      <div class="nav-item" onclick="showPage('grievance', this)">
+        <span class="icon">&#128172;</span> Queries &amp; Grievances
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Overall progress</div>
+      <div class="sidebar-progress">
+        <div class="progress-label">Stage 1 of 8 — 0%</div>
+        <div class="progress-track"><div class="progress-fill w-0"></div></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ MAIN ══ -->
+  <main class="main">
+
+    <!-- ══════════════════════════════
+         DASHBOARD
+    ══════════════════════════════ -->
+    <div id="page-dashboard" class="page active">
+      <div class="page-title">Dashboard</div>
+      <div class="page-sub">Live overview of Gokul Accord CHS Ltd redevelopment — last updated May 2026</div>
+
+      <div class="alert alert-warn">
+        <span class="alert-icon">&#9888;</span>
+        <span><strong>Next RDC Meeting:</strong> on 30/05/2026. Agenda — Discuss about Meeting held with diff. Society who are going/done Redevlopmet &amp; give Advt. for PMC.</span>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-label">Total flats/Shops</div>
+          <div class="stat-val">162/20</div>
+          <div class="stat-sub">Update in settings</div>
+        </div>
+	
+        <div class="stat-card">
+          <div class="stat-label">Members consented</div>
+          <div class="stat-val">107</div>
+          <div class="stat-sub">See consent tracker</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Meetings held</div>
+          <div class="stat-val">2</div>
+          <div class="stat-sub">Since April 2026</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Current stage</div>
+          <div class="stat-val">0 / 8</div>
+          <div class="stat-sub">Initial Stage</div>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="icon">&#128200;</span> Redevelopment stages</div>
+            <span class="pill pill-active">Stage 1 active</span>
+          </div>
+          <div class="stage-step">
+            <div class="step-num step-done">&#10003;</div>
+            <div class="step-body">
+              <div class="step-title">1. SGM resolution + RDC formed</div>
+              <div class="step-desc">Passed with &gt;75% consent</div>
+            </div>
+          </div>
+          <div class="stage-step">
+            <div class="step-num step-active">2</div>
+            <div class="step-body">
+              <div class="step-title">2. Structural audit</div>
+            </div>
+          </div>
+		  
+     
+          <div class="stage-step">
+            <div class="step-num step-future">3</div>
+            <div class="step-body">
+              <div class="step-title">3. PMC appointment + RFP + developer selection</div>
+            </div>
+          </div>
+          <div class="stage-step">
+            <div class="step-num step-future">4</div>
+            <div class="step-body">
+              <div class="step-title">4. Development Agreement signing</div>
+              <div class="step-desc">Pending developer selection</div>
+            </div>
+          </div>
+          <div class="stage-step mb-0">
+            <div class="step-num step-future">5+</div>
+            <div class="step-body">
+              <div class="step-title">5–8. MCGM approvals → Construction → OC</div>
+              <div class="step-desc">Future stages pending</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="icon">&#128197;</span> Recent meetings</div>
+            <button class="btn" onclick="showPage('meetings', document.querySelectorAll('.nav-item')[1])">View all</button>
+          </div>
+          <div class="table-row">
+            <span class="row-main">SGM — Consent vote</span>
+            <span class="pill pill-done">Minutes ready</span>
+          </div>
+          <div class="table-row">
+            <span class="row-main">SGM  — Committee formation</span>
+            <span class="pill pill-done">Minutes ready</span>
+          </div>
+          <div class="table-row">
+            <span class="row-main">RDC Meeting #1 — Committee Roles & Responsilities.Discussed Initial Stage of Redevelopment</span>
+            <span class="pill pill-done">Minutes ready</span>
+          </div>
+          <div class="table-row">
+            <span class="row-main">RDC Meeting #2 — Discussed step of Redevelopment,DC Registration ( Index II) & Property Card Status</span>
+            <span class="pill pill-done">Minutes ready</span>
+          </div>
+          <div class="table-row">
+            <span class="row-main">RDC Meeting #3 — on 30th May 2026</span>
+            <span class="pill pill-warn">Upcoming</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="icon">&#128193;</span> Recent documents</div>
+            <button class="btn" onclick="showPage('documents', document.querySelectorAll('.nav-item')[9])">All docs</button>
+          </div>
+          <div class="doc-row">
+            <span class="doc-icon">&#128196;</span>
+            <span class="doc-name">Minutes — RDC Meeting #2</span>
+            <span class="doc-meta">16 May 2026</span>
+            
+<a class="btn" 
+   href="https://drive.google.com/file/d/1RqasG4z9ahNMOyCfmO-2aItFUPpZjYIa/view?usp=sharing" 
+   target="_blank">
+   View
+</a>
+
+          </div>
+          <div class="doc-row">
+            <span class="doc-icon">&#128196;</span>
+            <span class="doc-name">Minutes — RDC Meeting #1</span>
+            <span class="doc-meta">18 Apr 2026</span>
+            <button class="btn">View</button>
+          </div>
+          <div class="doc-row">
+            <span class="doc-icon">&#128196;</span>
+            <span class="doc-name">SGM Consent Register</span>
+            <span class="doc-meta">March 2026</span>
+            <button class="btn">View</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="icon">&#128276;</span> Latest notices</div>
+            <button class="btn" onclick="showPage('notices', document.querySelectorAll('.nav-item')[10])">All notices</button>
+          </div>
+          <div class="table-row">
+            <div>
+              <div class="row-main">RDC to Meet with Various Societies nearby Already or Going for Redevelopment</div>
+              <div class="row-meta">Date 30 MAy 2026: AGENDA</div>
+            </div>
+<div class="tl-actions">
+  <span class="pill pill-warn"
+        onclick="showPage('meetings', this)">
+    Upcoming
+  </span>
+</div>
+          </div>
+          <div class="table-row">
+            <div>
+              <div class="row-main">Collected the following Documents from Society Office </div>
+              <div class="row-meta">DC Registration Copy ( Index II )</div>
+			  <div class="row-meta">Property Card Application Copy</div>
+            </div>
+            <span class="pill pill-active">Active</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════
+         MEETINGS
+    ══════════════════════════════ -->
+    <div id="page-meetings" class="page">
+      <div class="page-title">Meetings &amp; Minutes</div>
+      <div class="page-sub">Complete date-wise log of all RDC and General Body meetings with downloadable minutes</div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><span class="icon">&#128197;</span> Meeting timeline</div>
+          <span class="pill pill-pending">2 meetings held</span>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-spine"><div class="tl-dot tl-dot-future"></div></div>
+            <div class="tl-body">
+              <div class="tl-date">30th May 2026</div>
+
+<div class="tl-title">
+  RDC Meeting #3 — Review & Planning Meeting
+</div>
+
+<div class="tl-desc">
+  <b>AGENDA</b><br><br>
+
+  1. Review of Previous Meeting &amp; Action Points<br><br>
+
+  2. Property Card Status Update<br>
+  &bull; Current status, pending requirements and follow-up<br><br>
+
+  3. Structural Audit Status<br>
+  &bull; Progress update and expected timeline<br><br>
+
+  4. Learning from Other Redevelopment Societies<br>
+  &bull; Sharing observations from redevelopment society visits/interactions<br>
+  &bull; Understanding practical redevelopment process and challenges<br><br>
+
+  5. PMC Appointment Discussion<br>
+  &bull; Role and responsibilities of PMC<br>
+  &bull; PMC selection criteria for Gokul Accord<br>
+  &bull; Process for identifying and evaluating PMCs<br><br>
+
+  6. Legal &amp; Documentation Support Discussion<br>
+  &bull; Property Card / 7/12 / Sanad related guidance<br>
+  &bull; Understanding requirement of redevelopment legal advisor/support<br><br>
+
+  7. Documentation &amp; Coordination<br>
+  &bull; Meeting records, follow-up tracking and communication process<br><br>
+
+  8. Planning of Next Steps &amp; Roadmap<br><br>
+
+  9. Suggestions &amp; Open Discussion<br><br>
+
+  10. Conclusion
+</div>
+
+<div class="tl-actions">
+  <span class="pill pill-warn">Upcoming</span>
+</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-spine"><div class="tl-dot tl-dot-done"></div><div class="tl-connector"></div></div>
+            <div class="tl-body">
+              <div class="tl-date">16 May 2026</div>
+              <div class="tl-title">RDC Meeting #2 — Discussed step of Redevelopment,DC Registration ( Index II) & Property Card Status</div>
+              <div class="tl-desc">Discussed step of Redevelopment,DC Registration ( Index II) & Property Card Status.</div>
+              <div class="tl-actions">
+                <span class="pill pill-done">Minutes uploaded</span>
+                <button class="btn">&#128190; Download PDF</button>
+                <span class="row-meta text-xs">Attended: 6/10 members</span>
+              </div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-spine"><div class="tl-dot tl-dot-done"></div><div class="tl-connector"></div></div>
+            <div class="tl-body">
+              <div class="tl-date">18 April 2026</div>
+              <div class="tl-title">RDC Meeting #1 — Committee Roles & Responsilities.Discussed Initial Stage of Redevelopment</div>
+              <div class="tl-desc">Discussed step of Redevelopment,DC Registration ( Index II) & Property Card Status</div>
+              <div class="tl-actions">
+                <span class="pill pill-done">Minutes uploaded</span>
+                <button class="btn">&#128190; Download PDF</button>
+                <span class="row-meta text-xs">Attended: 5/10 members</span>
+              </div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-spine"><div class="tl-dot tl-dot-done"></div></div>
+            <div class="tl-body">
+              <div class="tl-date">Marh 2026</div>
+              <div class="tl-title">SGM — Committee formation</div>
+              <div class="tl-desc">Redevelopment Committee elected by members per Bye-law 79A.</div>
+              <div class="tl-actions">
+                <span class="pill pill-done">Minutes uploaded</span>
+                <button class="btn">&#128190; Download PDF</button>
+                <span class="row-meta text-xs">Attended: 7/7 members</span>
+              </div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-spine"><div class="tl-dot tl-dot-done"></div><div class="tl-connector"></div></div>
+            <div class="tl-body">
+              <div class="tl-date">March 2026</div>
+              <div class="tl-title">Special General Body Meeting — Consent vote</div>
+              <div class="tl-desc">Resolution for redevelopment passed with quorum. Member-wise signed consent obtained and filed. RDC committee formation authorised.</div>
+              <div class="tl-actions">
+                <span class="pill pill-done">Minutes uploaded</span>
+                <button class="btn">&#128190; Download PDF</button>
+                <span class="row-meta text-xs">Quorum achieved — consent list on file</span>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════
+         STAGES
+    ══════════════════════════════ -->
+    <div id="page-stages" class="page">
+      <div class="page-title">Redevelopment Stages</div>
+      <div class="page-sub">Complete 8-stage process for Mumbai CHS redevelopment under MCS Act 1960 &amp; MCGM DCR 2034</div>
+
+      <div class="alert alert-info">
+        <span class="alert-icon">&#8505;</span>
+        <span>Gokul Accord is currently at <strong>Stage 1</strong>. All future stages depend on timely DA signing and MCGM approvals.</span>
+      </div>
+
+      <div class="card">
+        <div class="stage-step">
+		 
+           <div class="step-num step-done">&#10003;</div> 
+           <div class="step-body"> 
+             <div class="step-title">Stage 2 — SGM resolution + RDC committee election</div> 
+             <div class="step-desc">Special General Body Meeting held. ≥75% member consent obtained per MCS Act. RDC committee elected. Intimation to Registrar of Co-operative Societies filed.</div> 
+             <div class="mt-2"><span class="pill pill-done">Completed</span></div> 
+           </div> 
+        </div> 
+        <div class="stage-step"> 
+          <div class="step-num step-active">2</div>
+          <div class="step-body">
+            <div class="step-title">Stage 2 — Structural / technical audit</div>
+            <div class="step-desc">Independent structural engineer appointed. Report submitted confirming building age and structural condition as basis for redevelopment under Bye-law 79A.</div>
+            <div class="prog-bar"><div class="prog-fill w-80"></div></div>
+            <div class="mt-2"><span class="pill pill-active">In progress</span></div>
+          </div>
+        </div>
+        
+        <div class="stage-step">
+          <div class="step-num step-future">3</div>
+          <div class="step-body">
+            <div class="step-title">Stage 3 — PMC/Architect appointment · RFP issue · Developer selection</div>
+            <div class="step-desc">Project Management Consultant (PMC) appointed to assist society. RFP (Request for Proposal) issued to empanelled developers. Bids evaluated on: FSI/TDR utilisation, additional carpet area offered, corpus fund per sqft, transit rent per sqft per month, developer track record, MahaRERA compliance, financial strength.</div>
+            <div class="step-note">RFP issued — 3 bids received — 2 developers shortlisted for site visit</div>
+            <div class="mt-2"><span class="pill pill-pending">Pending</span></div>
+          </div>
+        </div>
+        <div class="stage-step">
+          <div class="step-num step-future">4</div>
+          <div class="step-body">
+            <div class="step-title">Stage 4 — Development Agreement drafting &amp; registration</div>
+            <div class="step-desc">DA drafted by society's solicitor. Key clauses: transit rent escalation, corpus fund deposit schedule, carpet area guarantee, bank guarantee from developer, construction timeline with penalty, force majeure. DA registered at Sub-Registrar Office (SRO). Power of Attorney executed by members.</div>
+            <div class="mt-2"><span class="pill pill-pending">Pending</span></div>
+          </div>
+        </div>
+        <div class="stage-step">
+          <div class="step-num step-future">5</div>
+          <div class="step-body">
+            <div class="step-title">Stage 5 — MCGM approvals (IOD → CC)</div>
+            <div class="step-desc">Architect submits building plans to MCGM. Intimation of Disapproval (IOD) issued. Plans sanctioned. Commencement Certificate (CC) obtained. NOC from BMC fire brigade, electricity, tree authority etc.</div>
+            <div class="mt-2"><span class="pill pill-pending">Pending</span></div>
+          </div>
+        </div>
+        <div class="stage-step">
+          <div class="step-num step-future">6</div>
+          <div class="step-body">
+            <div class="step-title">Stage 6 — Transit rent payment &amp; member vacating</div>
+            <div class="step-desc">Developer begins transit rent payments per DA. Members vacate within agreed timeline. Hardship allowance if applicable. Security deposit returned by society. Personal belongings move-out facilitated.</div>
+            <div class="mt-2"><span class="pill pill-pending">Pending</span></div>
+          </div>
+        </div>
+        <div class="stage-step">
+          <div class="step-num step-future">7</div>
+          <div class="step-body">
+            <div class="step-title">Stage 7 — Demolition &amp; construction</div>
+            <div class="step-desc">Old structure demolished (BMC permit required). New building construction begins. PMC monitors construction milestones monthly. RDC receives progress reports. Structural completion, slab casting, external work tracked.</div>
+            <div class="mt-2"><span class="pill pill-pending">Pending</span></div>
+          </div>
+        </div>
+        <div class="stage-step mb-0">
+          <div class="step-num step-future">8</div>
+          <div class="step-body">
+            <div class="step-title">Stage 8 — OC, possession &amp; society reformation</div>
+            <div class="step-desc">Occupancy Certificate (OC) obtained from MCGM. Individual flats measured and handed over. New society registered under MCS Act. Share certificates reissued. Property card / 7/12 updated.</div>
+            <div class="mt-2"><span class="pill pill-pending">Pending</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════
+         MEMBER CONSENT
+    ══════════════════════════════ -->
+    <div id="page-consent" class="page">
+      <div class="page-title">Member Consent Tracker</div>
+      <div class="page-sub">Flat-wise consent status — updated after each SGM. Legally required ≥75% for redevelopment under MCS Act.</div>
+
+      <div class="three-col mb-4">
+        <div class="stat-card">
+          <div class="stat-label">Total flats</div>
+          <div class="stat-val">—</div>
+          <div class="stat-sub">Update with actual count</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Consented</div>
+          <div class="stat-val text-green">—</div>
+          <div class="stat-sub">Signed consent forms</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Consent %</div>
+          <div class="stat-val text-green">—%</div>
+          <div class="stat-sub">Required: ≥75%</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><span class="icon">&#9989;</span> Flat-wise consent register</div>
+          <button class="btn">&#128190; Export CSV</button>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="consent-table">
+            <thead>
+              <tr>
+                <th>Flat No.</th>
+                <th>Member Name</th>
+                <th>Wing</th>
+                <th>Carpet Area (sqft)</th>
+                <th>Consent</th>
+                <th>Date</th>
+                <th>Remarks</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-3 text-sm text-text3">
+          &#8505; Add all flat numbers and member names. Consent forms (signed + scanned) should be uploaded in Documents section.
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════
+         DEVELOPER BIDS
+    ══════════════════════════════ -->
+    <div id="page-developer" class="page">
+      <div class="page-title">Developer Bid Comparison</div>
+      <div class="page-sub">Side-by-side evaluation of all RFP responses received — visible to all members for transparency</div>
+
+      <div class="alert alert-info">
+        <span class="alert-icon">&#8505;</span>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><span class="icon">&#127970;</span> Bid comparison matrix</div>
+          <button class="btn">&#128190; Download</button>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="dev-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Developer A</th>
+                <th>Developer B &#9733;</th>
+                <th>Developer C</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-3 text-sm text-text3">
+          &#9733; Developer B is PMC's preferred recommendation based on corpus fund, transit rent, and completed projects. Final decision rests with RDC committee and member vote.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ══════════════════════════════
+         DA CHECKLIST
+    ══════════════════════════════ -->
+    <div id="page-da" class="page">
+      <div class="page-title">Development Agreement Checklist</div>
+      <div class="page-sub">Key DA terms and their agreed values — once DA is signed, this becomes the binding reference for all members</div>
+
+      <div class="alert alert-warn">
+        <span class="alert-icon">&#9888;</span>
+        <span>DA not yet signed. Values shown are from RFP terms set by RDC. Final figures will be confirmed after developer selection and DA negotiation.</span>
+      </div>
+
+    </div>
+
+    <!-- ══════════════════════════════
+         LEGAL MILESTONES
+    ══════════════════════════════ -->
+    <div id="page-legal" class="page">
+      <div class="page-title">Legal Milestones</div>
+      <div class="page-sub">Key legal and regulatory approvals — each must be tracked with date and document reference</div>
+    </div>
+
+    <!-- ══════════════════════════════
+         FINANCE & CORPUS
+    ══════════════════════════════ -->
+    <div id="page-finance" class="page">
+      <div class="page-title">Finance &amp; Corpus Fund</div>
+      <div class="page-sub">Financial transparency — corpus fund status, society accounts, and CA-certified statements</div>
+
+      <div class="two-col">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="icon">&#128181;</span> Corpus fund details</div>
+            <span class="pill pill-pending">Not received yet</span>
+          </div>
+          <div class="finance-row"><span class="finance-label">Corpus fund agreed (per sqft)</span><span class="finance-val">&#8377;-</span></div>
+          <div class="finance-row"><span class="finance-label">Total corpus (estimated)</span><span class="finance-val">To be calculated</span></div>
+          <div class="finance-row"><span class="finance-label">Corpus bank account</span><span class="finance-val">To be opened</span></div>
+          <div class="finance-row"><span class="finance-label">Amount received to date</span><span class="finance-val">&#8377;0</span></div>
+          <div class="finance-row border-none"><span class="finance-label">CA certificate</span><span class="pill pill-pending">Pending</span></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="icon">&#128200;</span> Transit rent tracker</div>
+            <span class="pill pill-pending">Not started</span>
+          </div>
+          <div class="finance-row"><span class="finance-label">Transit rent (per sqft/month)</span><span class="finance-val">&#8377;-</span></div>
+          <div class="finance-row"><span class="finance-label">Annual escalation</span><span class="finance-val">-%</span></div>
+          <div class="finance-row"><span class="finance-label">Payment mode</span><span class="finance-val">Direct to member bank</span></div>
+          <div class="finance-row"><span class="finance-label">First payment date</span><span class="finance-val">Upon vacating</span></div>
+          <div class="finance-row border-none"><span class="finance-label">Last rent paid</span><span class="finance-val">—</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════
+         DOCUMENTS
+    ══════════════════════════════ -->
+    <div id="page-documents" class="page">
+      <div class="page-title">Document Repository</div>
+      <div class="page-sub">All society, legal, RDC and regulatory documents in one place — organized by category</div>
+
+      <div class="two-col">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="icon">&#127968;</span> Society documents</div>
+          </div>
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">Registration certificate</span><button class="btn">View</button></div>
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">Bye-laws (latest amended)</span><button class="btn">View</button></div>
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">7/12 extract / property card</span><button class="btn">View</button></div>
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">Commencement Certificate (original)</span><button class="btn">View</button></div>
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">Occupation Certificate (original)</span><button class="btn">View</button></div>
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">Share certificates register</span><button class="btn">View</button></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="icon">&#9878;</span> RDC / Legal documents</div>
+          </div>
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">Structural audit report</span><button class="btn">View</button></div>
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">SGM resolution &amp; consent register</span><button class="btn">View</button></div>
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">PMC appointment letter</span><button class="btn">View</button></div>
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">RFP document</span><button class="btn">View</button></div>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="icon">&#128197;</span> Meeting minutes archive</div>
+          </div>
+          
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">Minutes — RDC Meeting #2</span><span class="doc-meta">16 May 2026</span><button class="btn">Download</button></div>
+         
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">Minutes — RDC Meeting #1</span><span class="doc-meta">18 April 2026</span><button class="btn">Download</button></div>
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">Minutes — SGM consent vote</span><span class="doc-meta">March 2026</span><button class="btn">Download</button></div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><span class="icon">&#128200;</span> Pending uploads</div>
+          </div>
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">Development Agreement (signed)</span><span class="pill pill-pending">Pending</span></div>
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">Power of Attorney (all members)</span><span class="pill pill-pending">Pending</span></div>
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">MCGM IOD &amp; building plans</span><span class="pill pill-pending">Pending</span></div>
+          <div class="doc-row"><span class="doc-icon">&#128196;</span><span class="doc-name">CA-certified corpus fund receipt</span><span class="pill pill-pending">Pending</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════
+         COMMITTEE
+    ══════════════════════════════ -->
+    <div id="page-committee" class="page">
+      <div class="page-title">RDC Committee</div>
+      <div class="page-sub">Elected Redevelopment Committee members and appointed professional advisors</div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><span class="icon">&#128101;</span> Elected RDC members</div>
+          <span class="pill pill-done">Formed April 2026</span>
+        </div>
+        <div class="members-grid">
+          <div class="member-card">
+            <div class="avatar">GB</div>
+            <div class="member-name">Gaurav Bashkuwa</div>
+            <div class="member-flat">Flat — A-404</div>
+            <div class="member-role">Member</div>
+          </div>
+          <div class="member-card">
+            <div class="avatar">RS</div>
+            <div class="member-name">Rajesh Shrivastava</div>
+            <div class="member-flat">Flat — A-504</div>
+            <div class="member-role">Member</div>
+          </div>
+          <div class="member-card">
+            <div class="avatar">SS</div>
+            <div class="member-name">Shankar Shetye</div>
+            <div class="member-flat">Flat — B-401</div>
+            <div class="member-role">Member</div>
+          </div>
+          <div class="member-card">
+            <div class="avatar">MP</div>
+            <div class="member-name">Murji Patel</div>
+            <div class="member-flat">Flat — B-604</div>
+            <div class="member-role">Member</div>
+          </div>
+          <div class="member-card">
+            <div class="avatar">SD</div>
+            <div class="member-name">Sheila David</div>
+            <div class="member-flat">Flat — C-302</div>
+            <div class="member-role">Member</div>
+          </div>
+          <div class="member-card">
+            <div class="avatar">CD</div>
+            <div class="member-name">Clayton R. D’Souza</div>
+            <div class="member-flat">Flat — C-301</div>
+            <div class="member-role">Member</div>
+          </div>
+          <div class="member-card">
+            <div class="avatar">AT</div>
+            <div class="member-name">Ashvin Tarsaria</div>
+            <div class="member-flat">Flat — C-101</div>
+            <div class="member-role">Member</div>
+          </div>
+          <div class="member-card">
+            <div class="avatar">VR</div>
+            <div class="member-name">Vijay Ramani</div>
+            <div class="member-flat">Flat — C-705</div>
+            <div class="member-role">Member</div>
+          </div>
+          <div class="member-card">
+            <div class="avatar">NS</div>
+            <div class="member-name">Neelam M. Singh</div>
+            <div class="member-flat">Flat — D-402</div>
+            <div class="member-role">Member</div>
+          </div>
+          <div class="member-card">
+            <div class="avatar">SS</div>
+            <div class="member-name">Shailesh Somani</div>
+            <div class="member-flat">Flat — D-202</div>
+            <div class="member-role">Member</div>
+          </div>
+          <div class="member-card">
+            <div class="avatar">MD</div>
+            <div class="member-name">Mitesh Desai</div>
+            <div class="member-flat">Flat — E-103</div>
+            <div class="member-role">Member</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════
+         NOTICES
+    ══════════════════════════════ -->
+    <div id="page-notices" class="page">
+      <div class="page-title">Notices &amp; Circulars</div>
+      <div class="page-sub">Official communications from the RDC committee to all members</div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><span class="icon">&#128276;</span> All notices</div>
+          <button class="btn btn-primary">+ Add notice</button>
+        </div>
+        <div class="notice-item">
+          <div class="notice-date">30th May 2026</div>
+          <div class="notice-body">
+            <div class="notice-title">Notice — RDC Meeting #3</div>
+           <div class="notice-desc">
+  <b>AGENDA</b><br><br>
+
+  1. Review of Previous Meeting &amp; Action Points<br><br>
+
+  2. Property Card Status Update<br>
+  &nbsp;&nbsp;&bull; Current status, pending requirements and follow-up<br><br>
+
+  3. Structural Audit Status<br>
+  &nbsp;&nbsp;&bull; Progress update and expected timeline<br><br>
+
+  4. Learning from Other Redevelopment Societies<br>
+  &nbsp;&nbsp;&bull; Sharing observations from redevelopment society visits/interactions<br>
+  &nbsp;&nbsp;&bull; Understanding practical redevelopment process and challenges<br><br>
+
+  5. PMC Appointment Discussion<br>
+  &nbsp;&nbsp;&bull; Role and responsibilities of PMC<br>
+  &nbsp;&nbsp;&bull; PMC selection criteria for Gokul Accord<br>
+  &nbsp;&nbsp;&bull; Process for identifying and evaluating PMCs<br><br>
+
+  6. Legal &amp; Documentation Support Discussion<br>
+  &nbsp;&nbsp;&bull; Property Card / 7/12 / Sanad related guidance<br>
+  &nbsp;&nbsp;&bull; Understanding requirement of redevelopment legal advisor/support<br><br>
+
+  7. Documentation &amp; Coordination<br>
+  &nbsp;&nbsp;&bull; Meeting records, follow-up tracking and communication process<br><br>
+
+  8. Planning of Next Steps &amp; Roadmap<br><br>
+
+  9. Suggestions &amp; Open Discussion<br><br>
+
+  10. Conclusion
+</div>
+
+            <div class="mt-1"><span class="pill pill-warn">Upcoming</span></div>
+          </div>
+        </div>
+        <div class="notice-item">
+          <div class="notice-date">March 2026</div>
+          <div class="notice-body">
+            <div class="notice-title">SGM notice — Redevelopment consent vote</div>
+            <div class="notice-desc">Notice for Special General Body Meeting on 10 November 2024. Agenda: resolution for redevelopment under Bye-law 79A, consent collection.</div>
+            <div class="mt-1"><span class="pill pill-done">Archived</span><button class="btn ml-2">View</button></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><span class="icon">&#127758;</span> Useful official links</div>
+        </div>
+        <div class="table-row"><span class="row-main">MahaRERA — verify developer registration</span><a href="https://maharera.mahaonline.gov.in" target="_blank"><button class="btn">Open &#8599;</button></a></div>
+        <div class="table-row"><span class="row-main">MCGM building proposal system</span><a href="https://bps.mcgm.gov.in" target="_blank"><button class="btn">Open &#8599;</button></a></div>
+        <div class="table-row"><span class="row-main">Registrar of Co-operative Societies Maharashtra</span><a href="https://www.maharashtra.gov.in" target="_blank"><button class="btn">Open &#8599;</button></a></div>
+        <div class="table-row"><span class="row-main">Maharashtra Co-op Societies Act 1960 (text)</span><button class="btn">Open &#8599;</button></div>
+        <div class="table-row"><span class="row-main">MHADA redevelopment circular</span><button class="btn">Open &#8599;</button></div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════
+         GRIEVANCES
+    ══════════════════════════════ -->
+    <div id="page-grievance" class="page">
+      <div class="page-title">Member Queries &amp; Grievances</div>
+      <div class="page-sub">All member questions and RDC responses — logged here for full transparency instead of scattered WhatsApp messages</div>
+
+      <div class="alert alert-success">
+        <span class="alert-icon">&#9989;</span>
+        <span>All queries are reviewed by the RDC committee within 7 working days. Responses are posted here and communicated to the member directly.</span>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><span class="icon">&#128172;</span> Query log</div>
+          <button class="btn btn-primary">+ Submit query</button>
+        </div>
+        <div class="grievance-item">
+          <div class="g-header">
+            <div class="g-title">When will we get to know the final developer?</div>
+            <div class="flex-center-gap"><span class="g-flat">Flat 302</span><span class="pill pill-done">Answered</span></div>
+          </div>
+          <div class="g-desc">Member asked timeline for developer announcement after site visits.</div>
+          <div class="g-response">&#10003; RDC Response: Final selection will happen in Meeting #5, expected within 4–6 weeks. All members will be notified in advance with the meeting notice.</div>
+        </div>
+        <div class="grievance-item">
+          <div class="g-header">
+            <div class="g-title">Will transit rent cover rent in our area? &#8377;35/sqft seems low.</div>
+            <div class="flex-center-gap"><span class="g-flat">Flat 105</span><span class="pill pill-done">Answered</span></div>
+          </div>
+          <div class="g-desc">Member raised concern about adequacy of transit rent for local market rates.</div>
+          <div class="g-response">&#10003; RDC Response: &#8377;35/sqft is the minimum. Negotiation with selected developer will aim higher. Additionally, 10% annual escalation applies. Member feedback has been noted for DA negotiations.</div>
+        </div>
+        <div class="grievance-item border-b-none">
+          <div class="g-header">
+            <div class="g-title">What happens if developer delays beyond 36 months?</div>
+            <div class="flex-center-gap"><span class="g-flat">Flat 204</span><span class="pill pill-active">Under review</span></div>
+          </div>
+          <div class="g-desc">Member asked about penalty clauses and legal remedies for construction delay.</div>
+          <div class="g-response g-response-blue">&#8987; Under review — Legal advisor will provide a note on delay penalty clause for the DA. Response expected by next meeting.</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  Gokul Accord CHS Ltd &mdash; Redevelopment Intranet &bull; For members only &bull; Not for public circulation &bull;
+  <span id="footer-year"></span>
+</footer>
+
+</body>
+</html>
