@@ -1,0 +1,19 @@
+/* Utility Classes Extracted from Inline Styles */
+
+.w-0 { width: 0%; }
+.w-80 { width: 80%; }
+.mb-0 { margin-bottom: 0; }
+.mb-4 { margin-bottom: 18px; }
+.mt-1 { margin-top: 6px; }
+.mt-2 { margin-top: 8px; }
+.mt-3 { margin-top: 14px; }
+.ml-2 { margin-left: 8px; }
+.text-xs { font-size: 11px; }
+.text-sm { font-size: 12px; }
+.text-green { color: var(--green); }
+.text-text3 { color: var(--text3); }
+.overflow-x-auto { overflow-x: auto; }
+.border-b-none { border-bottom: none; }
+.border-none { border: none; }
+.flex-center-gap { display: flex; gap: 8px; align-items: center; }
+.g-response-blue { background: var(--blue-bg); color: var(--blue); border-left-color: var(--blue); }
